@@ -1,3 +1,7 @@
+## Original
+
+https://github.com/qmk/qmk_firmware/tree/master/keyboards/lily58
+
 ## Changes from original
 
 - Disabled tri layers so that layer 3 can be activated using a signle key.
