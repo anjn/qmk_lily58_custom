@@ -14,6 +14,7 @@ OLED_ENABLE = yes           # OLED display
 TRI_LAYER_ENABLE = no       # Disable tri layers
 VIA_ENABLE = yes            # Enable VIA
 EXTRAKEY_ENABLE = yes       # Audio control and System control
+DYNAMIC_TAPPING_TERM_ENABLE = yes # Enable Dynamic Tapping Term
 
 # If you want to change the display of OLED, you need to change here
 SRC +=  ./lib/rgb_state_reader.c \
