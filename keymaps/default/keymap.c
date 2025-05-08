@@ -7,6 +7,11 @@ enum layer_number {
   _ADJUST,
 };
 
+enum custom_keycodes {
+  ALT_GRV = KC_LNG1,
+  CTL_BRC = KC_LNG2,
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* QWERTY
@@ -146,5 +151,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #endif
     // set_timelog();
   }
+
+  if (keycode == ALT_GRV && record->event.pressed) {
+    register_code(KC_RALT);
+    tap_code(KC_GRV);
+    unregister_code(KC_RALT);
+    return false;
+  }
+
+  if (keycode == CTL_BRC && record->event.pressed) {
+    register_code(KC_RCTL);
+    tap_code(KC_LBRC);
+    unregister_code(KC_RCTL);
+    return false;
+  }
+
+
   return true;
 }
